@@ -1,0 +1,185 @@
+{
+    "[latex]": {
+        "editor.formatOnPaste": false,
+        "editor.suggestSelection": "recentlyUsedByPrefix",
+        "editor.tabSize": 2
+    },
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": [
+                    "support.function.be.latex",
+                    "support.function.general.tex",
+                    "support.function.textit.latex",
+                    "support.function.texttt.latex",
+                    "support.function.textbf.latex",
+                    "support.function.textsc.latex",
+                    "support.function.url.latex",
+                    "support.function.footnote.latex"
+                ],
+                "settings": {
+                    "foreground": "#0000FF"
+                }
+            },
+            {
+                "scope": [
+                    "support.function.section.latex"
+                ],
+                "settings": {
+                    "fontStyle": "bold",
+                    "foreground": "#b700ff"
+                }
+            },
+            {
+                "scope": [
+                    "variable.parameter.function.latex",
+                    "constant.other.reference.citation.latex"
+                ],
+                "settings": {
+                    "foreground": "#67a4ad"
+                }
+            }
+        ]
+    },
+    "files.defaultLanguage": "${activeEditorLanguage}",
+    "keyboard.dispatch": "keyCode",
+    "latex-workshop.bibtex-format.sort.enabled": true,
+    "latex-workshop.linting.chktex.enabled": true,
+    "latex-workshop.intellisense.citation.backend": "biblatex",
+    "latex-workshop.intellisense.package.enabled": true,
+    "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": false,
+    "latex-workshop.latex.autoBuild.interval": 30000,
+    "latex-workshop.latex.autoBuild.run": "onSave",
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux",
+        "*.bbl",
+        "*.blg",
+        "*.idx",
+        "*.ind",
+        "*.lof",
+        "*.lot",
+        "*.out",
+        "*.toc",
+        "*.acn",
+        "*.acr",
+        "*.alg",
+        "*.glg",
+        "*.glo",
+        "*.gls",
+        "*.fls",
+        "*.log",
+        "*.fdb_latexmk",
+        "*.snm",
+        "*.synctex(busy)",
+        "*.synctex.gz(busy)",
+        "*.nav",
+        "*.synctex.gz",
+        "*.run.xml",
+        "*.bcf",
+        "*.xdv",
+        "*.vrb",
+        "_minted*"
+    ],
+    "latex-workshop.latex.clean.subfolder.enabled": true,
+    "latex-workshop.latex.magic.args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "--shell-escape",
+        "%DOC%"
+    ],
+    "latex-workshop.latex.outDir": "%DIR%/out",
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk 🔃",
+            "tools": [
+                "latexmk"
+            ]
+        },
+        {
+            "name": "xelatex ➞ biber ➞ gloss ➞ xelatex× 2",
+            "tools": [
+                "xelatex",
+                "biber",
+                "makeglossaries",
+                "xelatex",
+                "xelatex"
+            ]
+        },
+        {
+            "name": "pdflatex ➞ bibtex ➞ pdflatex × 2",
+            "tools": [
+                "pdflatex",
+                "bibtex",
+                "pdflatex",
+                "pdflatex"
+            ]
+        },
+        {
+            "name": "latexmk (latexmkrc)",
+            "tools": [
+                "latexmk_rconly"
+            ]
+        },
+        {
+            "name": "Compile Rnw files",
+            "tools": [
+                "rnw2pdf"
+            ]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "args": [
+                "-f",
+                "-xelatex",
+                "-shell-escape",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ],
+            "command": "latexmk",
+            "env": {},
+            "name": "latexmk"
+        },
+        {
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-shell-excape",
+                "-file-line-error",
+                "-output-directory=%OUTDIR%",
+                "%DOC%"
+            ],
+            "command": "xelatex",
+            "env": {},
+            "name": "xelatex"
+        },
+        {
+            "args": [
+                "--output-directory",
+                "%OUTDIR%",
+                "%DOCFILE%"
+            ],
+            "command": "biber",
+            "env": {},
+            "name": "biber"
+        },
+        {
+            "args": [
+                "-d",
+                "%OUTDIR%",
+                "%DOCFILE%"
+            ],
+            "command": "makeglossaries",
+            "env": {},
+            "name": "makeglossaries"
+        }
+    ],
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.linting.chktex.convertOutput.column.chktexrcTabSize": 2,
+    "editor.inlineSuggest.enabled": true,
+    "jupyter.interactiveWindow.textEditor.executeSelection": true
+}
