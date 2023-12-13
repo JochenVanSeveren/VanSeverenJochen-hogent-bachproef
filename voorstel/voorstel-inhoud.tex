@@ -1,72 +1,129 @@
 %---------- Inleiding ---------------------------------------------------------
 
+% TODO: remove this
+
+% Dag Manu en Guillaume!
+ 
+% Het is een maandje geleden dat ik Manu eens navroeg welke bachelor proeven jullie mij konden aanbieden en daar vermeldde ik dat ik graag nog even op zoek wou gaan naar een onderwerp dat mij persoonlijk echt aanspreekt en een bijdrage zou brengen aan mijn omgeving. 
+ 
+% Context: 
+ 
+% Sinds dan, werd ik passief overvallen door het kwijt geraken van mijn kat en de hele zoektocht door facebookgroepen op zoek naar hem en ik wou dit tracking probleem oplossen, maar daar bestaat al een website voor, dus ging ik verder op zoek : )
+ 
+% Een weekje geleden kwam Thomas Bonte, de founder van MuseScore (open source muzieknotatiesoftware) spreken in mijn keuzevak ondernemen. Omdat ik zelf jarenlang van deze software heb kunnen genieten, dacht ik mijn kans te grijpen en te vragen of ik hem kon helpen met een bachelor proef, maar helaas, hij heeft het bedrijf al verkocht.
+
+% Er kwam ter sprake dat ik mijn skills wou inzetten voor sustainable bedrijven en niet rap voor bijvoorbeeld de verfindustrie waar ik lang studentejobs heb gedaan in de fabriek en in de laboratoria. Toen hij verfindustrie en mijn ervaring ermee hoorde, begon hij direct over Clean Water Global.
+% Ik quoteer eens de founder van CWG zijn laatste LinkedIn post om een schets te geven van wat ze doen:
+
+% 🔍 Hoewel het verboden is,duidelijk gemeld op veiligheidsfiches, worden er dagelijks enorme hoeveelheden vervuild verfspoelwater geloosd in de riool. Met bestanddelen als microplastics,acticide,biocides,titaniumdioxiden, pigmenten en zware metalen is het meer dan duidelijk dat verfspoelwater ver weg moet blijven van zeeën, oceanen en drinkwater.
+
+% Tijdens ons pilotjaar 2022/2023 verzamelden we met 80 schilders,40.000liter verfspoelwater. Daaruit filterde we 6,2ton verfresidu. 
+% Kortom 1 schilder 2000liter water en 355kg verfresidu. Dat staat gelijk aan bijna een volledige pallet met verf die hierdoor niet in onze riolering terecht kwam,per persoon.
+
+% Het residu word voorbereid als circulaire grondstof en ontwikkeld voor re-integratie in coatings,decoratieve technieken en plamuren.
+
+% Met Clean Water Global ontwikkelden we een systeem om vervuiling door verfspoelwater tegen te gaan: een oplossing waarmee we samen met alle schilders, verfwinkels en verfproducenten bijdragen aan een circulaire,duurzame en propere toekomst! 🌏
+ 
+% Ik heb Timmy Bours direct gecontacteerd met een nog langere mail dan deze met de vraag of zijn bedrijf voor technische problemen staat waarvoor IT een oplossing zou kunnen bieden.
+% Bijna direct heb ik kunnen online meeten met hem.
+ 
+% Idee:
+ 
+% Van wat ik kon verstaan uit de eerste meeting, is dit hun werkwijze:
+% Er staan meerdere depositpunten opgesteld waar schilders kunnen betalen om hun verfafval water af te zetten en te laten filteren. Hiervoor betalen ze een fee aan de partner waarbij het depositpunt opgesteld staat en deze partner betaald dan Clean Water Global om deze te komen leeghalen (deze factuur wordt manueel opgemaakt in Odoo en de volheid van de tanks worden bijgehouden met een monitoringssysteem dat een sms verstuurd, maar dit blijkt niet optimaal te zijn).
+% De schilders houden deze facturen bij om aan te tonen dat ze in orde zijn met de regelgeving.
+ 
+% Ik heb dit voorgelegd aan de bachelorproef begeleider bij Hogent en ze zei me dat een complex probleem oplossen voor een bedrijf, een ideale bachelorproef is mits genoeg analyse en onderzoek van wat er mogelijk is.
+ 
+% Concreet kwamen we op het volgende:
+% Een app waar schilders hun deposits kunnen bijhouden door middel van certificaten per bezoek en een globaal overzicht van hoeveel ze al gedeponeerd hebben. Met dat schilders vaak voor een bedrijf werken, kunnen we onmiddellijk ook voor het volledige bedrijf de voetafdruk tonen. 
+% Het zou interessant zijn om te onderzoeken in hoeverre we kunnen helpen om te bewijzen aan de overheid of ze in lijn zijn met de huidige regelgeving.
+% Hiervoor is er ook een systeem nodig om de partner bedrijven het aantal liters van de deposittransactie te laten inputten.
+ 
+% Dit volstond volgens de docent als bachelorproef al, maar ik heb nog wat extra ideëen die ik nog zou kunnen toevoegen wanneer ik mijn bachelorproefvoorstel uitschrijf:
+ 
+% Als extensie hiervan bood ik hem de solutie aan om de invoices naar de schilders niet meer met een middleman (de partner waar het depositpunt staat) te laten verlopen, maar door rechtstreeks in de app de betalingsoptie aan te bieden en dan in 1 keer de middleman uit te betalen. 
+% Odoo zijn xmlRPC laag ken ik al dus ik zou erin slagen om customers en invoices aan te maken in Odoo en mogelijks zelfs Stripe (nog onderzoek voor nodig) verbinden om direct betaling uit te voeren.
+% Het zou een meerwaarde zijn om meer mensen de regelgeving te laten volgen moesten bedrijven voor al hun schilders in dienst, een balans kunnen toevoegen in de app als depositbudget.  
+ 
+% Timmy Bours sprak ook over de monitors in de depositpunten te verbeteren, maar ik heb nog geen hardware kennis kunnen op doen.
+ 
+% Voorstel:
+ 
+% Mijn vraag is nu of dit binnen we-are past en of jullie dit zouden zien zitten om mij in te begeleiden?
+% Ik gokte van wel, want ik heb jullie gekozen als stageplek omdat ik het gevoel heb dat jullie ook aan missies willen bijdragen en dat er heel wat software architectuur kennis in het team zit wat ideaal is voor deze bp en om bij te leren in een stage.
+% Het idee klinkt misschien nog wat breed, maar na jullie feedback, kan ik het nog wat meer afbakenen of dingen weglaten.
+ 
+% Het was een beetje een lange mail, maar het is ook al even een zoektocht geweest naar een goed idee voor mij dus ik hoop dat jullie mijn enthousiasme delen!
+ 
+% Indien er interesse is, hebben jullie tijd voor een meeting deze week?
+% Erna meet ik nog eens met Timmy en schrijf ik het voorstel concreet uit (deadline 15 december).
+ 
+% Met vriendelijke groeten,
+% Jochen Van Severen
+ 
+% jochenvanseveren.com
+ 
+
 \section{Introductie}%
 \label{sec:introductie}
 
-Waarover zal je bachelorproef gaan? Introduceer het thema en zorg dat volgende zaken zeker duidelijk aanwezig zijn:
+Dit onderzoek vertrekt vanuit een concrete casus, 
+maar behandelt de bredere onderzoeksvraag: 
+Hoe kan de integratie tussen moderne cross-platform applicaties en ERP-systeem Odoo worden gerealiseerd in het kader van verfafvalwaterdeposits door schilders?
 
-\begin{itemize}
-  \item kaderen thema
-  \item de doelgroep
-  \item de probleemstelling en (centrale) onderzoeksvraag
-  \item de onderzoeksdoelstelling
-\end{itemize}
+% TODO: BUG wrap line above
+\bigskip
+Voor mijn bachelorproef ging ik op zoek naar een bedrijf wiens missie ik deel 
+en waar technisch onderzoek nodig is om hun werking te verbeteren.
+In mijn zoektocht kwam ik terecht bij Clean Water Global, 
+een bedrijf dat zich inzet voor een circulaire economie door verfafvalwater te filteren en te hergebruiken.
+Het probleem dat het bedrijf tracht op te lossen is het illegaal lozen van verfafvalwater door schilders.
+% TODO: BRON AAN TIMMY VRAGEN 
+Cijfers uit het pilotjaar van Clean Water Global tonen aan dat men voor 80 schilders, 40.000 liter verfspoelwater kon verzamelen en hieruit 6,2 ton verfresidu filteren.
+Het voorgaande gebruik om dit afvalwater illegaal te dumpen is in huidige jaren sterk gereguleerd. 
+De ondernememing Clean Water Global biedt een manier aan om de schilders in regel te stellen met de huidige wetgeving.
+Ze doen dit door een netwerk van partners op te stellen die hun depositpunten plaatsgeven waar schilders dan hun verfafvalwater kunnen afzetten.
+Dit proces verloopt als volgt: de schilder betaalt een fee aan de partner waarbij het depositpunt opgesteld staat en deze partner betaald dan Clean Water Global om deze te komen leeghalen.
+Bij dit factureren komt er veel administratie te kijken bij de partner telkens en 
+is er naast papieren factuurbonnen ook geen duidelijk overzicht van hoeveel deze al gedeponeerd heeft 
+voor de schilder in questie en bij extensie het bedrijf waar deze werkt.
 
-Denk er aan: een typische bachelorproef is \textit{toegepast onderzoek}, wat betekent dat je start vanuit een concrete probleemsituatie in bedrijfscontext, een \textbf{casus}. Het is belangrijk om je onderwerp goed af te bakenen: je gaat voor die \textit{ene specifieke probleemsituatie} op zoek naar een goede oplossing, op basis van de huidige kennis in het vakgebied.
+\bigskip
 
-De doelgroep moet ook concreet en duidelijk zijn, dus geen algemene of vaag gedefinieerde groepen zoals \emph{bedrijven}, \emph{developers}, \emph{Vlamingen}, enz. Je richt je in elk geval op it-professionals, een bachelorproef is geen populariserende tekst. Eén specifiek bedrijf (die te maken hebben met een concrete probleemsituatie) is dus beter dan \emph{bedrijven} in het algemeen.
+Clean Water Gebruikt huidig het open source ERP-systeem Odoo om hun facturatie te beheren en deze bachelorproef zal onderzoeken hoe er een integratie kan opgezet worden 
+tussen Odoo en een cross-platform framework om een mobiele applicatie te ontwikkelen die de schilders faciliteert in het betalen van hun deposits en het bijhouden van hun certificaten.
+Deze integratie zal het mogelijk maken om de facturatie rechtstreeks met de schilder te laten verlopen en de partner uit te betalen in 1 keer.
+Hiervoor is er een authenticatie systeem om de schilders te laten inloggen, een systeem nodig om het correcte aantal liters van de deposittransactie te laten inputten, 
+een manier om betaling uit te voeren en een manier om de certificaten te laten bijhouden zodat de schilders kunnen aantonen dat ze in orde zijn met de regelgeving.
 
-Formuleer duidelijk de onderzoeksvraag! De begeleiders lezen nog steeds te veel voorstellen waarin we geen onderzoeksvraag terugvinden.
+\bigskip 
 
-Schrijf ook iets over de doelstelling. Wat zie je als het concrete eindresultaat van je onderzoek, naast de uitgeschreven scriptie? Is het een proof-of-concept, een rapport met aanbevelingen, \ldots Met welk eindresultaat kan je je bachelorproef als een succes beschouwen?
+Het onderzoek zal focussen op wat er functioneel mogelijk is en hier een proof of concept van ontwikkelen.
+% TODO: insert independant study how many companies use ODOO OR market share
 
 %---------- Stand van zaken ---------------------------------------------------
 
 \section{State-of-the-art}%
 \label{sec:state-of-the-art}
 
-Hier beschrijf je de \emph{state-of-the-art} rondom je gekozen onderzoeksdomein, d.w.z.\ een inleidende, doorlopende tekst over het onderzoeksdomein van je bachelorproef. Je steunt daarbij heel sterk op de professionele \emph{vakliteratuur}, en niet zozeer op populariserende teksten voor een breed publiek. Wat is de huidige stand van zaken in dit domein, en wat zijn nog eventuele open vragen (die misschien de aanleiding waren tot je onderzoeksvraag!)?
 
-Je mag de titel van deze sectie ook aanpassen (literatuurstudie, stand van zaken, enz.). Zijn er al gelijkaardige onderzoeken gevoerd? Wat concluderen ze? Wat is het verschil met jouw onderzoek?
-
-Verwijs bij elke introductie van een term of bewering over het domein naar de vakliteratuur, bijvoorbeeld~\autocite{Hykes2013}! Denk zeker goed na welke werken je refereert en waarom.
-
-Draag zorg voor correcte literatuurverwijzingen! Een bronvermelding hoort thuis \emph{binnen} de zin waar je je op die bron baseert, dus niet er buiten! Maak meteen een verwijzing als je gebruik maakt van een bron. Doe dit dus \emph{niet} aan het einde van een lange paragraaf. Baseer nooit teveel aansluitende tekst op eenzelfde bron.
-
-Als je informatie over bronnen verzamelt in JabRef, zorg er dan voor dat alle nodige info aanwezig is om de bron terug te vinden (zoals uitvoerig besproken in de lessen Research Methods).
-
-% Voor literatuurverwijzingen zijn er twee belangrijke commando's:
-% \autocite{KEY} => (Auteur, jaartal) Gebruik dit als de naam van de auteur
-%   geen onderdeel is van de zin.
-% \textcite{KEY} => Auteur (jaartal)  Gebruik dit als de auteursnaam wel een
-%   functie heeft in de zin (bv. ``Uit onderzoek door Doll & Hill (1954) bleek
-%   ...'')
-
-Je mag deze sectie nog verder onderverdelen in subsecties als dit de structuur van de tekst kan verduidelijken.
 
 %---------- Methodologie ------------------------------------------------------
 \section{Methodologie}%
 \label{sec:methodologie}
 
-Hier beschrijf je hoe je van plan bent het onderzoek te voeren. Welke onderzoekstechniek ga je toepassen om elk van je onderzoeksvragen te beantwoorden? Gebruik je hiervoor literatuurstudie, interviews met belanghebbenden (bv.~voor requirements-analyse), experimenten, simulaties, vergelijkende studie, risico-analyse, PoC, \ldots?
+% IDEA SECTION: 
+% literatuurstudie naar bestaande cross platform frameworks, en dan een vergelijkende studie uitvoeren om te bepalen welk framework het beste is voor de casus
+% literatuurstudie naar bestaande odoo modules
+% interview bij mensen bij Odoo / Edwin CTO Lab box en zijn team
+% contact OCA
 
-Valt je onderwerp onder één van de typische soorten bachelorproeven die besproken zijn in de lessen Research Methods (bv.\ vergelijkende studie of risico-analyse)? Zorg er dan ook voor dat we duidelijk de verschillende stappen terug vinden die we verwachten in dit soort onderzoek!
+% Vergelijking Fastapi in Odoo / Fastapi server / Fastapi serverless
 
-Vermijd onderzoekstechnieken die geen objectieve, meetbare resultaten kunnen opleveren. Enquêtes, bijvoorbeeld, zijn voor een bachelorproef informatica meestal \textbf{niet geschikt}. De antwoorden zijn eerder meningen dan feiten en in de praktijk blijkt het ook bijzonder moeilijk om voldoende respondenten te vinden. Studenten die een enquête willen voeren, hebben meestal ook geen goede definitie van de populatie, waardoor ook niet kan aangetoond worden dat eventuele resultaten representatief zijn.
-
-Uit dit onderdeel moet duidelijk naar voor komen dat je bachelorproef ook technisch voldoen\-de diepgang zal bevatten. Het zou niet kloppen als een bachelorproef informatica ook door bv.\ een student marketing zou kunnen uitgevoerd worden.
-
-Je beschrijft ook al welke tools (hardware, software, diensten, \ldots) je denkt hiervoor te gebruiken of te ontwikkelen.
-
-Probeer ook een tijdschatting te maken. Hoe lang zal je met elke fase van je onderzoek bezig zijn en wat zijn de concrete \emph{deliverables} in elke fase?
+% Requirements analyse bij Clean Water Global adhv interview eerste dondedag bp
 
 %---------- Verwachte resultaten ----------------------------------------------
 \section{Verwacht resultaat, conclusie}%
 \label{sec:verwachte_resultaten}
-
-Hier beschrijf je welke resultaten je verwacht. Als je metingen en simulaties uitvoert, kan je hier al mock-ups maken van de grafieken samen met de verwachte conclusies. Benoem zeker al je assen en de onderdelen van de grafiek die je gaat gebruiken. Dit zorgt ervoor dat je concreet weet welk soort data je moet verzamelen en hoe je die moet meten.
-
-Wat heeft de doelgroep van je onderzoek aan het resultaat? Op welke manier zorgt jouw bachelorproef voor een meerwaarde?
-
-Hier beschrijf je wat je verwacht uit je onderzoek, met de motivatie waarom. Het is \textbf{niet} erg indien uit je onderzoek andere resultaten en conclusies vloeien dan dat je hier beschrijft: het is dan juist interessant om te onderzoeken waarom jouw hypothesen niet overeenkomen met de resultaten.
 
