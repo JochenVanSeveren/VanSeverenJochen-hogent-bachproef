@@ -100,10 +100,10 @@ Hoe de api best gebouwd zal worden en waar deze best gehost wordt, zal onderzoek
 De Odoo Community Association is een non-profit organisatie die de ontwikkeling van Odoo modules ondersteunt.
 Ze hebben een module ontwikkeld die het mogelijk maakt om fastapi te draaien in Odoo~\autocite{ocaRestFramework2023}
 Dit heeft als voordeel dat de api in Odoo zelf kan draaien en dus geen extra infrastructuur nodig heeft, 
-maar Maxime Van Reynd (Projectmanager bij Odoo) heeft aangegeven dat ze deze optie niet verkiezen.
+maar Maxime Van Reyd (Projectmanager bij Odoo) heeft aangegeven dat ze deze optie niet verkiezen.
 
 \paragraph*{Dedicated server}
-Maxime Van Reynd en andere contactpersonen bij Odoo hebben liever een server die buiten Odoo draait om de maintainability en upgradability van Odoo te garanderen.
+Maxime Van Reyd en andere contactpersonen bij Odoo hebben liever een server die buiten Odoo draait om de maintainability en upgradability van Odoo te garanderen.
 Dit heeft als voordeel dat de api niet in Odoo zelf draait en dus geen impact heeft op de performantie van Odoo, maar dit heeft als nadeel dat er een extra server nodig is.
 
 \paragraph*{Serverless functions}
@@ -139,7 +139,51 @@ Dit is een van de redenen waarom dit onderzoek interessant is.
 
 % Requirements analyse bij Clean Water Global adhv interview eerste dondedag bp
 
+De methodologie van van dit onderzoek zal als volgt verlopen:
+
+\begin{enumerate}
+    \item \textbf{Literatuurstudie:}
+    \begin{itemize}
+        \item Analyse van bestaande Odoo-modules en API-frameworks, inclusief de Fastapi module van OCA.
+        \item Interviews met professionals bij Odoo, Lab Box en OCA voor inzichten in beste praktijken en aanbevelingen.
+        \item Vergelijkend onderzoek tussen cross-platform frameworks, voornamelijk Flutter en React Native.
+    \end{itemize}
+    
+    \item \textbf{Requirements Analyse:}
+    \begin{itemize}
+        \item Analyse van de bedrijfsprocessen en requirements bij Clean Water Global en het afbakenen van de scope van de integratie. 
+        \item Opstellen van een longlist en shortlist van potentiële oplossingen op basis van literatuurstudie en requirements analyse.
+    \end{itemize}
+
+    \item \textbf{Selectie van Technologieën:}
+    \begin{itemize}
+        \item Opstellen van een longlist en shortlist van potentiële oplossingen op basis van literatuurstudie en requirements analyse.
+        \item Beoordeling van de haalbaarheid en efficiëntie van verschillende benaderingen: Fastapi binnen Odoo, dedicated server of serverless functies.
+    \end{itemize}
+
+    \item \textbf{Ontwikkeling van een Proof-of-Concept:}
+    \begin{itemize}
+        \item Implementatie van een basisversie van de applicatie in het gekozen framework, geïntegreerd met Odoo.
+        \item Testen op functionaliteit, prestaties en gebruiksgemak.
+    \end{itemize}
+
+    \item \textbf{Analyse en Conclusie:}
+    \begin{itemize}
+        \item Evaluatie van de proof-of-concept en formuleren van aanbevelingen voor de integratie.
+    \end{itemize}
+\end{enumerate}
+
 %---------- Verwachte resultaten ----------------------------------------------
 \section{Verwacht resultaat, conclusie}%
 \label{sec:verwachte_resultaten}
 
+Dit onderzoek is gericht op het vaststellen van een efficiënte en effectieve manier om Odoo te integreren met een cross-platform mobiele applicatie. De verwachte resultaten omvatten:
+
+\begin{itemize}
+    \item Een gedetailleerd inzicht in de sterke en zwakke punten van Flutter en React Native in relatie tot hun integratie met Odoo.
+    \item Aanbevelingen voor de meest geschikte technologieën en frameworks, afgestemd op de requirements van Clean Water Global.
+    \item Een functionerend proof-of-concept dat de integratie in de praktijk demonstreert.
+    \item Praktische richtlijnen voor bedrijven die vergelijkbare integraties overwegen.
+\end{itemize}
+
+De conclusie zal richtlijnen bieden over de meest efficiënte en effectieve aanpak voor de integratie, rekening houdend met zowel technische haalbaarheid als bedrijfsbehoeften. Dit zal waardevolle inzichten bieden voor Clean Water Global en kan dienen als referentiekader voor andere bedrijven.
