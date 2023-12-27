@@ -4,45 +4,48 @@
 
 Dit onderzoek vertrekt vanuit een concrete casus, 
 maar behandelt de bredere onderzoeksvraag: 
-Hoe kan de integratie tussen moderne cross-platform applicaties en ERP-systeem Odoo worden gerealiseerd in het kader van verfafvalwaterdeposits door schilders?
+Hoe kan de integratie tussen ERP-systeem Odoo en moderne cross-platform applicaties worden gerealiseerd in het kader van verfafvalwaterdeposits door schilders?
 
-% TODO: BUG wrap line above
 \bigskip
+
 Voor mijn bachelorproef ging ik op zoek naar een bedrijf wiens missie ik deel 
 en waar technisch onderzoek nodig is om hun werking te verbeteren.
 In mijn zoektocht kwam ik terecht bij Clean Water Global, 
 een bedrijf dat zich inzet voor een circulaire economie door verfafvalwater te filteren en te hergebruiken.
 Het probleem dat het bedrijf tracht op te lossen is het illegaal lozen van verfafvalwater door schilders.
-% TODO: BRON AAN TIMMY VRAGEN 
+
 Cijfers uit het pilotjaar van Clean Water Global tonen aan dat men voor 80 schilders, 40.000 liter verfspoelwater kon verzamelen en hieruit 6,2 ton verfresidu filteren.
 Het voorgaande gebruik om dit afvalwater illegaal te dumpen is in huidige jaren sterk gereguleerd. 
 De ondernememing Clean Water Global biedt een manier aan om de schilders in regel te stellen met de huidige wetgeving.
 Ze doen dit door een netwerk van partners op te stellen die hun depositpunten plaatsgeven waar schilders dan hun verfafvalwater kunnen afzetten.
-Dit proces verloopt als volgt: de schilder betaalt een fee aan de partner waarbij het depositpunt opgesteld staat en deze partner betaald dan Clean Water Global om deze te komen leeghalen.
+Dit proces verloopt als volgt: de schilder betaalt een bedrag aan de partner waarbij het depositpunt opgesteld staat en deze partner betaald dan Clean Water Global om deze te komen leeghalen.
 Bij dit factureren komt er veel administratie te kijken bij de partner telkens en 
 is er naast papieren factuurbonnen ook geen duidelijk overzicht van hoeveel deze al gedeponeerd heeft 
-voor de schilder in questie en bij extensie het bedrijf waar deze werkt.
+voor de schilder in kwestie en bij extensie het bedrijf waar deze werkt.
 
-\bigskip
+
 
 Clean Water Gebruikt huidig het open source ERP-systeem Odoo om hun facturatie te beheren en deze bachelorproef zal onderzoeken hoe er een integratie kan opgezet worden 
 tussen Odoo en een cross-platform framework om een mobiele applicatie te ontwikkelen die de schilders faciliteert in het betalen van hun deposits en het bijhouden van hun certificaten.
 Deze integratie zal het mogelijk maken om de facturatie rechtstreeks met de schilder te laten verlopen en de partner uit te betalen in 1 keer.
-Hiervoor is er een authenticatie systeem om de schilders te laten inloggen, een systeem nodig om het correcte aantal liters van de deposittransactie te laten inputten, 
-een manier om betaling uit te voeren en een manier om de certificaten te laten bijhouden zodat de schilders kunnen aantonen dat ze in orde zijn met de regelgeving.
+In het kader van dit project is een authenticatiesysteem vereist waarmee schilders kunnen inloggen. 
+Daarnaast is er een systeem nodig om het exacte aantal liters van de deposittransactie vast te leggen. 
+Ook moet er een betalingsfunctie geïmplementeerd worden. 
+Ten slotte is het belangrijk dat er een manier is om certificaten bij te houden. 
+Dit zal de schilders in staat stellen om aan te tonen dat ze voldoen aan de regelgeving.
 
-\bigskip 
+ 
 
 Het onderzoek zal focussen op wat er functioneel mogelijk is en hier een proof of concept van ontwikkelen.
-% TODO: insert independant study how many companies use ODOO OR market share
 
 %---------- Stand van zaken ---------------------------------------------------
 
-\section{State-of-the-art}%
-\label{sec:state-of-the-art}
+\section{Literatuurstudie}%
+\label{sec:literatuurstudie}
 
-Odoo is relatief nieuw, maar wel een van de meest gebruikte ERP-systemen al.
-Dit heeft als gevolg dat er weinig tot geen onderzoek is gedaan naar de integratie van Odoo met cross-platform frameworks.
+Odoo is relatief nieuw, maar wel al een van de
+meest gebruikte ERP-systemen.
+Dit heeft als gevolg dat er nog weinig tot geen onderzoek is gedaan naar de integratie van Odoo met cross-platform frameworks.
 Voorbeelden zijn schaars te vinden, maar aangezien Odoo een open source project is, is de opportuniteit er wel om zelf een integratie te ontwikkelen.
 Onderzoek heeft een kleine kans om uit te wijzen dat dit niet mogelijk is door bijvoorbeeld te veel security risico's, maar dit is onwaarschijnlijk.
 
@@ -52,19 +55,19 @@ Odoo, voorheen OpenERP, is een open-source Enterprise Resource Planning (ERP) sy
 Volgens de studie van \textcite{GaneshEtAl2016} vindt men een volgende uitgebreide beschrijving van Odoo.
 Het werd geïntroduceerd in een belangrijke update met de release van Odoo/OpenERP 8.0.
 Dit systeem omvat niet alleen traditionele ERP functionaliteiten, maar integreert ook bijkomende features zoals een Content Management System (CMS), e-commerce mogelijkheden en business intelligence tools.
-\bigskip
+
 Odoo's architectuur maakt gebruik van verschillende open-source technologieën, wat flexibiliteit en schaalbaarheid garandeert.
 Het gebruikt Python als zijn primaire programmeertaal, gekend voor zijn eenvoud en compatibiliteit over platformen heen.
 De database server van het systeem is PostgreSQL, die object-relationele mapping ondersteunt en zeer schaalbaar is in termen van data opslag en gebruikerscapaciteit.
 Odoo maakt gebruik van het MVC framework, wat de scheiding van data (model) en user interface (view) faciliteert, met een controller als tussenschakel.
-\bigskip
+
 Een belangrijk aspect van Odoo is zijn kosteneffectiviteit en aanpasbaarheid, wat het toegankelijk maakt voor bedrijven van verschillende groottes, van kleine tot grote industrieën.
 De open-source aard van Odoo laat absolute eigendom van het systeem toe door organisaties, wat volledige controle over de broncode geeft en de afhankelijkheid van leveranciers vermindert.
 Deze feature is bijzonder voordelig op vlak van aanpassingen, onderhoud en het upgraden van het systeem.
 De kwaliteitsborging in Odoo is hoog door de actieve betrokkenheid en bijdragen van een community van onafhankelijke ontwikkelaars.
-\bigskip
-Odoo maakt een deel van zijn functionaliteiten beschikbaar via een API zoals gedocumenteerd op hun website\cite{odooExternalApi}.
-De communicate verloopt via xml remote procedure calls (xmlRPC) en is beschikbaar in verschillende programmeertalen\cite{xmlrpcWhatXMLRPC}
+
+Odoo maakt een deel van zijn functionaliteiten beschikbaar via een API zoals gedocumenteerd op hun website\autocite{odooExternalApi}.
+De communicate verloopt via xml remote procedure calls (xmlRPC) en is beschikbaar in verschillende programmeertalen\autocite{xmlrpcWhatXMLRPC}
 
 \subsection{Cross-Platform Frameworks}%
 \label{subsec:cross-platform}
@@ -75,18 +78,16 @@ Hier volgt een korte beschrijving van de twee van de meest gebruikte cross-platf
 \paragraph{Flutter:}
 Flutter is een open-source UI toolkit ontwikkeld door Google.
 Het is een cross-platform framework dat gebruikt kan worden om native applicaties te ontwikkelen voor Android, iOS, Windows, Mac, Linux en web.
-Flutter maakt gebruik van de Dart programmeertaal, die ook ontwikkeld is door Google.
+Flutter maakt gebruik van de Dart programmeertaal ontwikkeld door Google.
 Dart is een object-georiënteerde programmeertaal die gebruik maakt van een garbage collector en een ahead-of-time (AOT) compiler.
 De AOT compiler zet Dart code om naar native machine code voor de doelplatformen.
 
 \paragraph{React Native:}
-React Native is een open-source framework ontwikkeld door Facebook.
+React Native is een open-source framework ontwikkeld door Meta.
 Het is een cross-platform framework dat gebruikt kan worden om native applicaties te ontwikkelen voor Android, iOS, Windows en web.
 React Native maakt gebruik van de JavaScript programmeertaal.
-JavaScript is een object-georiënteerde programmeertaal die gebruik maakt van een garbage collector en een just-in-time (JIT) compiler.
-De JIT compiler zet JavaScript code om naar native machine code voor de doelplatformen.
+JavaScript maakt gebruik van een garbage collector en een just-in-time (JIT) compiler.
 
-\bigskip
 
 De keuze tussen deze twee frameworks zal gemaakt worden op basis van de resultaten van de literatuurstudie en de requirements analyse.
 
@@ -98,7 +99,7 @@ Hoe de api best gebouwd zal worden en waar deze best gehost wordt, zal onderzoek
 
 \paragraph*{Oca (Odoo Community Association): Fastapi module}
 De Odoo Community Association is een non-profit organisatie die de ontwikkeling van Odoo modules ondersteunt.
-Ze hebben een module ontwikkeld die het mogelijk maakt om fastapi te draaien in Odoo~\autocite{ocaRestFramework2023}
+Ze hebben een module ontwikkeld die het mogelijk maakt om Fastapi te draaien in Odoo~\autocite{ocaRestFramework2023}
 Dit heeft als voordeel dat de api in Odoo zelf kan draaien en dus geen extra infrastructuur nodig heeft, 
 maar Maxime Van Reyd (Projectmanager bij Odoo) heeft aangegeven dat ze deze optie niet verkiezen.
 
@@ -107,10 +108,10 @@ Maxime Van Reyd en andere contactpersonen bij Odoo hebben liever een server die 
 Dit heeft als voordeel dat de api niet in Odoo zelf draait en dus geen impact heeft op de performantie van Odoo, maar dit heeft als nadeel dat er een extra server nodig is.
 
 \paragraph*{Serverless functions}
-Serverless functions zoals de Azure functions van Microsoft~\textcite{microsoftAzureFunctions} zijn een optie om de integratie zo kost efficiënt mogelijk te maken, 
+Serverless functions zoals de Azure functions van Microsoft~\autocite{Kurniawan2019} zijn een optie om de integratie zo kost efficiënt mogelijk te maken, 
 maar hebben ook hun nadelen die verder in de paper besproken zullen worden.
 
-\bigskip
+
 
 Over de effectieve intergratie tussen Odoo en de cross-platform framework is er weinig tot geen onderzoek te vinden.
 Dit is een van de redenen waarom dit onderzoek interessant is.
@@ -139,35 +140,29 @@ Dit is een van de redenen waarom dit onderzoek interessant is.
 
 % Requirements analyse bij Clean Water Global adhv interview eerste dondedag bp
 
-De methodologie van van dit onderzoek zal als volgt verlopen:
+De methodologie van van dit onderzoek zal in de volgende fases verdeeld over 14 weken verlopen:
 
 \begin{enumerate}
-    \item \textbf{Literatuurstudie:}
+    \item \textbf{Week 1-3: Literatuurstudie:}
     \begin{itemize}
         \item Analyse van bestaande Odoo-modules en API-frameworks, inclusief de Fastapi module van OCA.
         \item Interviews met professionals bij Odoo, Lab Box en OCA voor inzichten in beste praktijken en aanbevelingen.
         \item Vergelijkend onderzoek tussen cross-platform frameworks, voornamelijk Flutter en React Native.
     \end{itemize}
     
-    \item \textbf{Requirements Analyse:}
+    \item \textbf{Week 2-5: Requirementsanalyse:}
     \begin{itemize}
         \item Analyse van de bedrijfsprocessen en requirements bij Clean Water Global en het afbakenen van de scope van de integratie. 
         \item Opstellen van een longlist en shortlist van potentiële oplossingen op basis van literatuurstudie en requirements analyse.
+        \item Selectie van het meest geschikte framework en API-technologie.
     \end{itemize}
 
-    \item \textbf{Selectie van Technologieën:}
+    \item \textbf{Week 6-12: Ontwikkeling van een Proof-of-Concept:}
     \begin{itemize}
-        \item Opstellen van een longlist en shortlist van potentiële oplossingen op basis van literatuurstudie en requirements analyse.
-        \item Beoordeling van de haalbaarheid en efficiëntie van verschillende benaderingen: Fastapi binnen Odoo, dedicated server of serverless functies.
+        \item Implementatie van een functionele versie van de applicatie in het gekozen framework, geïntegreerd met Odoo.
     \end{itemize}
 
-    \item \textbf{Ontwikkeling van een Proof-of-Concept:}
-    \begin{itemize}
-        \item Implementatie van een basisversie van de applicatie in het gekozen framework, geïntegreerd met Odoo.
-        \item Testen op functionaliteit, prestaties en gebruiksgemak.
-    \end{itemize}
-
-    \item \textbf{Analyse en Conclusie:}
+    \item \textbf{Week 12-14: Analyse en Conclusie:}
     \begin{itemize}
         \item Evaluatie van de proof-of-concept en formuleren van aanbevelingen voor de integratie.
     \end{itemize}
@@ -177,13 +172,7 @@ De methodologie van van dit onderzoek zal als volgt verlopen:
 \section{Verwacht resultaat, conclusie}%
 \label{sec:verwachte_resultaten}
 
-Dit onderzoek is gericht op het vaststellen van een efficiënte en effectieve manier om Odoo te integreren met een cross-platform mobiele applicatie. De verwachte resultaten omvatten:
-
-\begin{itemize}
-    \item Een gedetailleerd inzicht in de sterke en zwakke punten van Flutter en React Native in relatie tot hun integratie met Odoo.
-    \item Aanbevelingen voor de meest geschikte technologieën en frameworks, afgestemd op de requirements van Clean Water Global.
-    \item Een functionerend proof-of-concept dat de integratie in de praktijk demonstreert.
-    \item Praktische richtlijnen voor bedrijven die vergelijkbare integraties overwegen.
-\end{itemize}
-
-De conclusie zal richtlijnen bieden over de meest efficiënte en effectieve aanpak voor de integratie, rekening houdend met zowel technische haalbaarheid als bedrijfsbehoeften. Dit zal waardevolle inzichten bieden voor Clean Water Global en kan dienen als referentiekader voor andere bedrijven.
+Dit onderzoek is gericht op het vaststellen van een efficiënte en effectieve manier om Odoo te integreren met een cross-platform mobiele applicatie. 
+De verwachte resultaten omvatten een proof-of-concept van een mobiele applicatie die geïntegreerd is met Odoo en een analyse van de voor- en nadelen van de verschillende opties.
+De conclusie zal richtlijnen bieden over de meeste efficiënte en effectieve aanpak voor de integratie, rekening houdend met zowel technische haalbaarheid als bedrijfsbehoeften.
+Dit zal waardevolle inzichten bieden voor Clean Water Global en kan dienen als referentiekader voor andere bedrijven.

@@ -136,3 +136,5 @@ output/
 out/
 
 ./voorstel/VoorstelTemplate.pdf
+
+.DS_Store
